@@ -1,1 +1,80 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+body {
+  margin: auto;
+}
+
+.contenu {
+  font-family: roboto,sans-serifs;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header {
+  padding-bottom: 10px;
+  -webkit-box-shadow: 0 4px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 2px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  position: relative;
+}
+
+.header_logo {
+  text-align: center;
+  font-family: shrikhand, sans-serif;
+  font-size: 2.3em;
+  margin-bottom: 0;
+}
+
+.map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f1eeee;
+}
+
+.map_icon {
+  margin: 17px 12px 0px 0px;
+}
+
+.map p {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.search {
+  background-color: #faf8f8;
+  padding: 30px 30px 70px 30px;
+  text-align: center;
+}
+
+.search_tittle {
+  margin-top: 0;
+  padding: 30px 30px 0px 30px;
+  font-size: 1.7em;
+}
+
+.search_subtittle {
+  font-weight: 300;
+  font-size: 1.1em;
+  margin-bottom: 50px;
+}
+
+.search_btn {
+  border: 0;
+  border-radius: 50px;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  color: white;
+  text-decoration: none;
+  padding: 15px 15px;
+  -webkit-box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.search_btn:hover {
+  opacity: 0.7;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+/*# sourceMappingURL=style.css.map */
