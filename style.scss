@@ -1,7 +1,11 @@
 $color-primaire: #9356dc;
 $color-secondaire: #ff79da;
 $color-tertiaire: #99e2d0;
+$color-fond: #f6f6f6;
 $font-tittle: shrikhand;
+%shadow {
+    box-shadow: 1px 5px 10px rgba(0,0,0,0.2);
+} 
 
 body {
     margin: auto;
@@ -37,7 +41,7 @@ body {
             }
 }  
 .search {
-    background-color: #faf8f8;
+    background-color: $color-fond;
     padding: 30px 30px 70px 30px;
     text-align: center;
         &_tittle {
@@ -57,10 +61,58 @@ body {
                     color:white;
                     text-decoration: none;
                     padding: 15px 15px;
-                    box-shadow: 1px 5px 10px rgba(0,0,0,0.2);
+                    @extend %shadow;
                         &:hover {
                             opacity: 0.7;
                             transition: all 0.5s ease;
                         }
                 }        
 } 
+.nav {
+    padding-bottom: 50px;
+        &_tittle {
+            font-size: 1.2em;
+            padding-left: 20px;
+            margin-top: 30px;
+        }
+}
+.nav_tittle {
+    font-size: 1.2em;
+    padding-left: 20px;
+    margin-top: 30px;
+}
+.choice {
+    display: block;
+
+        &_resto {
+            display: flex;
+            width: 80%;
+            text-decoration: none;
+            margin: auto;
+            background-color: $color-fond;
+            border-radius: 20px;
+            padding: 10px 0px;
+            margin-bottom: 30px;
+            @extend %shadow;
+                &:hover {
+                    background-color: #e7e7fc;
+                }
+        }    
+                &_number {
+                    background-color: $color-primaire;
+                    font-size: 0.8em;
+                    color: white;
+                    border-radius: 50%;
+                    padding: 5px;
+                    margin-left: -10px;
+                }
+                    &_icon {
+                        margin: 17px;  
+                        color: gray; 
+                    }
+                        &_tittle {
+                            color: black;
+                            font-weight: 600;
+                            padding-left: 10px;
+                        }
+}
