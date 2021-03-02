@@ -1,0 +1,244 @@
+.header {
+  padding-bottom: 10px;
+  -webkit-box-shadow: 0 4px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 2px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  position: relative;
+}
+
+.header_logo {
+  text-align: center;
+  font-family: shrikhand, sans-serif;
+  font-size: 2.3em;
+  margin-bottom: 0;
+}
+
+.map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f1eeee;
+}
+
+.map_icon {
+  margin: 17px 12px 0px 0px;
+}
+
+.map p {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.search {
+  background-color: #f6f6f6;
+  padding: 30px 30px 70px 30px;
+  text-align: center;
+}
+
+.search_tittle {
+  margin-top: 0;
+  padding: 30px 30px 0px 30px;
+  font-size: 1.7em;
+}
+
+.search_subtittle {
+  font-weight: 300;
+  font-size: 1.1em;
+  margin-bottom: 50px;
+}
+
+.search_btn {
+  border: 0;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  padding: 15px 15px;
+}
+
+.search_btn:hover {
+  opacity: 0.7;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.nav {
+  padding-bottom: 10px;
+}
+
+.nav_tittle {
+  font-size: 1.2em;
+  padding-left: 20px;
+  margin-top: 30px;
+}
+
+.tittle {
+  font-size: 1.2em;
+  padding-left: 20px;
+  margin-top: 30px;
+}
+
+.choice {
+  display: block;
+}
+
+.choice_resto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  text-decoration: none;
+  margin: auto;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  padding: 10px 0px;
+  margin-bottom: 30px;
+}
+
+.choice_resto:hover {
+  background-color: #e7e7fc;
+}
+
+.choice_number {
+  background-color: #9356dc;
+  font-size: 0.8em;
+  color: white;
+  border-radius: 50%;
+  padding: 3px 6px;
+  margin-left: -10px;
+  height: 15px;
+}
+
+.choice_icon {
+  margin: 17px;
+  color: gray;
+}
+
+.choice_tittle {
+  color: black;
+  font-weight: 600;
+  padding-left: 10px;
+}
+
+.resto {
+  background-color: #f6f6f6;
+}
+
+.resto h2 {
+  padding-top: 50px;
+}
+
+.carte {
+  padding-bottom: 30px;
+}
+
+.carte_resto {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  border-radius: 20px;
+  width: 90%;
+  margin: auto;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.carte_photo {
+  width: 100%;
+  height: 200px;
+  border-radius: 20px 20px 0px 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.new {
+  position: absolute;
+  border: 0;
+  background-color: #99e2d0;
+  padding: 5px 20px;
+  top: 20px;
+  right: 20px;
+  color: #04a981;
+  border-radius: 3px;
+}
+
+.new p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info h3 {
+  margin: 10px;
+  margin-bottom: 5px;
+  font-size: 1em;
+}
+
+.info p {
+  font-size: 0.9em;
+  font-weight: 300;
+  margin: 0px 10px 10px 10px;
+}
+
+.info_coeur {
+  margin-left: 40%;
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.info_coeur:hover > .progress__bar {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-animation-name: progress-bar;
+          animation-name: progress-bar;
+}
+
+@-webkit-keyframes progress-bar {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes progress-bar {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+.search_btn, .choice_resto, .carte_resto {
+  -webkit-box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.search_btn {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+}
+
+body {
+  margin: auto;
+}
+
+.contenu {
+  font-family: roboto,sans-serifs;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*# sourceMappingURL=main.css.map */

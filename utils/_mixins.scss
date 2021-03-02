@@ -1,0 +1,35 @@
+@mixin btn {
+    border: 0;
+    border-radius: 50px;
+    @extend %degrade;
+    color:white;
+    text-decoration: none;
+    padding: 15px 15px;
+    @extend %shadow;
+        &:hover {
+            opacity: 0.7;
+            transition: all 0.5s ease;
+        }
+} 
+@mixin logo {
+    text-align: center;
+    font-family: $font-tittle, sans-serif;
+    font-size: 2.3em;
+    margin-bottom: 0;
+} 
+@mixin carte {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    border-radius: 20px;
+    width: 90%;
+    margin: auto;
+    color: black;
+    margin-bottom: 20px;
+}
+@mixin carte_photo {
+    width: 100%;
+    height: 200px;
+    border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
+}

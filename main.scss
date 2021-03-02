@@ -1,0 +1,13 @@
+@import "./base/base";
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./pages/index";
+@import "./utils/placeholder";
+
+body {
+    margin: auto;
+}
+.contenu {
+    font-family: roboto,sans-serifs;
+    box-sizing: border-box;
+}
