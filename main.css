@@ -147,7 +147,7 @@
 
 .carte_photo {
   width: 100%;
-  height: 200px;
+  height: 180px;
   border-radius: 20px 20px 0px 0px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -187,39 +187,53 @@
   margin: 0px 10px 10px 10px;
 }
 
-.info_coeur {
-  margin-left: 40%;
-  font-size: 1.5em;
-  margin-top: 10px;
+.btn_coeur {
+  border: white;
 }
 
-.info_coeur:hover > .progress__bar {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-animation-name: progress-bar;
-          animation-name: progress-bar;
+footer {
+  background-color: #000000ba;
+  color: #fff;
+  padding-bottom: 30px;
 }
 
-@-webkit-keyframes progress-bar {
-  0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
+footer h1 {
+  font-family: shrikhand;
+  font-size: 1em;
+  font-weight: 500;
+  padding: 20px;
+  margin-block: auto;
 }
 
-@keyframes progress-bar {
-  0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
+.footer_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.footer_list_icon {
+  font-size: .8em;
+}
+
+.footer_list p {
+  padding-left: 10px;
+  margin: 0;
+}
+
+.hand {
+  margin-left: -5px;
+}
+
+footer p {
+  padding-left: 20px;
+}
+
+footer a {
+  padding-left: 20px;
+  color: #fff;
+  text-decoration: none;
 }
 
 .search_btn, .choice_resto, .carte_resto {

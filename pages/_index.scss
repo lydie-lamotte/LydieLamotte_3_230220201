@@ -130,24 +130,46 @@
                 margin: 0px 10px 10px 10px;
             }
 }
-.info_coeur {
-    margin-left: 40%;
-    font-size: 1.5em;
-    margin-top: 10px;
-        &:hover {
-            & > .progress__bar {
-                transform: scaleX(1);
-                animation-name: progress-bar;
+.btn_coeur {
+    border: white;
+}    
+                
+
+
+
+footer {
+    background-color: $color-footer;
+    color: #fff;
+    padding-bottom: 30px;
+        h1 {
+            font-family: $font-tittle;
+            font-size: 1em;
+            font-weight: 500;
+            padding: 20px;
+            margin-block: auto;   
+        }
+} 
+.footer_list {
+    display: flex;
+    padding-left: 20px;
+    margin-bottom: 10px;
+        &_icon {
+            font-size: .8em;
+        }
+            p {
+                padding-left: 10px;
+                margin: 0;
             }
-        }
-    }
-    
-    @keyframes progress-bar{
-        0% {
-            transform: scaleX(0);
-        }
-        100% {
-            transform: scaleX(1);
-        }
-    }
-            
+}     
+.hand {
+    margin-left: -5px;
+} 
+footer p {
+    padding-left: 20px;
+        
+}  
+ footer a {
+    padding-left: 20px;
+    color: #fff;
+    text-decoration: none;
+}         
