@@ -1,3 +1,97 @@
+.loader {
+  background-color: #f3f3f3;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: loader 3s both;
+          animation: loader 3s both;
+  pointer-events: none;
+}
+
+.loader_cube {
+  position: relative;
+  margin-left: 25%;
+  margin-top: 100px;
+  width: 70px;
+  height: 70px;
+  border-radius: 20%;
+  background-color: #9356dc;
+  -webkit-animation: cube 1.5s ease-in-out both;
+          animation: cube 1.5s ease-in-out both;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  pointer-events: none;
+}
+
+@-webkit-keyframes loader {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes loader {
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes cube {
+  0% {
+    background-color: #9356dc;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: #ff79da;
+    left: 100px;
+    top: 0px;
+  }
+  50% {
+    background-color: #99e2d0;
+    left: 100px;
+    top: 100px;
+  }
+  75% {
+    background-color: #9356dc;
+    left: 0px;
+    top: 100px;
+  }
+  100% {
+    background-color: #ff79da;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+@keyframes cube {
+  0% {
+    background-color: #9356dc;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: #ff79da;
+    left: 100px;
+    top: 0px;
+  }
+  50% {
+    background-color: #99e2d0;
+    left: 100px;
+    top: 100px;
+  }
+  75% {
+    background-color: #9356dc;
+    left: 0px;
+    top: 100px;
+  }
+  100% {
+    background-color: #ff79da;
+    left: 0px;
+    top: 0px;
+  }
+}
+
 .header {
   padding-bottom: 10px;
   -webkit-box-shadow: 0 4px 2px rgba(0, 0, 0, 0.1);
@@ -10,7 +104,8 @@
   text-align: center;
   font-family: shrikhand, sans-serif;
   font-size: 2.3em;
-  margin-bottom: 0;
+  margin: 0;
+  padding-top: 20px;
 }
 
 .map {
@@ -99,6 +194,7 @@
 
 .choice_resto:hover {
   background-color: #e7e7fc;
+  color: #9356dc;
 }
 
 .choice_number {
@@ -187,8 +283,19 @@
   margin: 0px 10px 10px 10px;
 }
 
-.btn_coeur {
-  border: white;
+.coeur {
+  margin-left: 40%;
+  margin-top: 15px;
+}
+
+.coeur_icon {
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.6em;
+}
+
+.coeur_icon:hover {
+  border: none;
 }
 
 footer {
@@ -241,7 +348,7 @@ footer a {
           box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.search_btn {
+.search_btn, .coeur_icon:hover {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
 }

@@ -15,7 +15,8 @@
     text-align: center;
     font-family: $font-tittle, sans-serif;
     font-size: 2.3em;
-    margin-bottom: 0;
+    margin: 0;
+    padding-top: 20px;
 } 
 @mixin carte {
     display: block;
