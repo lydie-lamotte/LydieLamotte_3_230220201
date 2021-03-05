@@ -99,9 +99,11 @@
             @extend %shadow;
                 &:hover {
                     background-color: #e7e7fc;
-                    color: $color-primaire;
                 }
-        }    
+        }  
+.choice_icon:hover {
+    color: $color-primaire;
+}          
                 &_number {
                     background-color: $color-primaire;
                     font-size: 0.8em;
@@ -153,32 +155,39 @@
 }
 .info {
     display: flex;
-        h3 {
-            margin: 10px;
-            margin-bottom: 5px;
-            font-size: 1em;   
-        }
-            p {
-                font-size: 0.9em;
-                font-weight: 300;
-                margin: 0px 10px 10px 10px;
-            }
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 0px 0px 20px 20px;
+    h3 {
+        margin: 10px;
+        margin-bottom: 5px;
+        font-size: 1em;   
+    }
+    p {
+        font-size: 0.9em;
+        font-weight: 300;
+        margin: 0px 10px 10px 10px;
+    }
 }
 .coeur {
-
-    margin-left: 40%;
-    margin-top: 15px;
-        &_icon {
-            background-clip: text;
-            -webkit-text-fill-color:transparent;
-            font-size: 1.6em;
-                &:hover {
-                    @extend %degrade;
-                    border: none;
-                }
-        }    
+    @include coeur;
+    &:hover {
+    animation: like 250ms ease-in-out forwards;
+    }
 }
-             
+
+@keyframes like {
+    0% { color:white;}
+    100% {
+        background-image: linear-gradient(to bottom right, $color-secondaire, $color-primaire);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-color: transparent;
+    }
+}
+    
+   
+                   
 footer {
     background-color: $color-footer;
     color: #fff;

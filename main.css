@@ -194,6 +194,9 @@
 
 .choice_resto:hover {
   background-color: #e7e7fc;
+}
+
+.choice .choice_icon:hover {
   color: #9356dc;
 }
 
@@ -269,6 +272,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white;
+  border-radius: 0px 0px 20px 20px;
 }
 
 .info h3 {
@@ -284,18 +292,43 @@
 }
 
 .coeur {
-  margin-left: 40%;
+  margin-right: 20px;
   margin-top: 15px;
+  color: white;
+  font-size: 1.5em;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: black;
 }
 
-.coeur_icon {
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 1.6em;
+.coeur:hover {
+  -webkit-animation: like 250ms ease-in-out forwards;
+          animation: like 250ms ease-in-out forwards;
 }
 
-.coeur_icon:hover {
-  border: none;
+@-webkit-keyframes like {
+  0% {
+    color: white;
+  }
+  100% {
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
+    background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: transparent;
+  }
+}
+
+@keyframes like {
+  0% {
+    color: white;
+  }
+  100% {
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
+    background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: transparent;
+  }
 }
 
 footer {
@@ -348,7 +381,7 @@ footer a {
           box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.search_btn, .coeur_icon:hover {
+.search_btn {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
 }
