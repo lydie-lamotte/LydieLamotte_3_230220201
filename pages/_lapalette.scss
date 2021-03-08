@@ -1,0 +1,68 @@
+.header_resto {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    &--icon {
+        font-size: 1.4em;
+        color: black;                       
+    }
+    h1 {
+        margin-right: 50px;
+    }
+}
+.restaurant {
+    background-color: $color-fond;
+    margin-top: -30px;
+    border-radius: 30px 30px 0px 0px;
+    z-index: 1;
+    position: relative;
+}
+.photo_intro {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+.titre {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: $font-tittle;
+    padding-left: 20px;
+}
+.coeur {
+    margin-right: 40px;
+}
+.choice_meal h2{
+    font-weight: 300;
+    font-size: 1em;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    position: relative;
+    &::after {
+        content: "";
+        height: 4px;
+        width: 40px;
+        background-color: $color-tertiaire;
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+    }
+}
+.meal {
+    @include meal;
+    @extend %shadow;
+    &_titre {
+        margin: 5px;
+        font-size: 1.1em;
+    }
+    &_detail { 
+        font-weight: 300;
+        margin: 0px 5px;
+    }
+}
+.prix p{
+    font-weight: 700;
+    padding-top: 15px;
+    margin-bottom: 5px;
+    margin-right: 20px;
+}

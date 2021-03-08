@@ -42,3 +42,13 @@
     -webkit-text-stroke: 1px;
     -webkit-text-stroke-color: black;
 }
+@mixin meal {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: white;  
+    width: 90%; 
+    margin: auto;
+    margin-bottom: 20px;
+}

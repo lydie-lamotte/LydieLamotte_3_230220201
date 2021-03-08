@@ -3,11 +3,11 @@
 @import "./utils/mixins";
 @import "./pages/index";
 @import "./utils/placeholder";
+@import "./pages/lapalette";
 
 body {
     margin: auto;
-}
-.contenu {
     font-family: roboto,sans-serifs;
     box-sizing: border-box;
 }
+

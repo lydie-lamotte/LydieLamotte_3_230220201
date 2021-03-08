@@ -1,3 +1,9 @@
+.contenu {
+  font-family: roboto,sans-serifs;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .loader {
   background-color: #f3f3f3;
   position: fixed;
@@ -169,7 +175,7 @@
   margin-top: 30px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 806px) {
   .tittle {
     font-size: 1.5em;
     text-align: center;
@@ -181,10 +187,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .choice_resto {
@@ -201,10 +205,10 @@
 }
 
 .choice_resto:hover {
-  background-color: #e7e7fc;
+  background-color: #e8e8fc;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 806px) {
   .choice_resto {
     width: 30%;
     padding: 0;
@@ -244,7 +248,7 @@
   padding-bottom: 30px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 806px) {
   .carte {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -268,7 +272,7 @@
   margin-bottom: 20px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 806px) {
   .carte_resto {
     width: 45%;
     margin-bottom: 30px;
@@ -283,7 +287,7 @@
      object-fit: cover;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 806px) {
   .carte_photo {
     height: 250px;
   }
@@ -374,7 +378,7 @@ footer {
   padding-bottom: 30px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 806px) {
   footer {
     text-align: center;
   }
@@ -388,7 +392,7 @@ footer h1 {
   margin: auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 806px) {
   footer h1 {
     font-size: 1.4em;
     padding-left: 40px;
@@ -403,7 +407,7 @@ footer h1 {
   margin-bottom: 10px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 806px) {
   .footer_list {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -434,7 +438,7 @@ footer a {
   text-decoration: none;
 }
 
-.search_btn, .choice_resto, .carte_resto {
+.search_btn, .choice_resto, .carte_resto, .meal {
   -webkit-box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
 }
@@ -444,11 +448,111 @@ footer a {
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
 }
 
-body {
-  margin: auto;
+.header_resto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.contenu {
+.header_resto--icon {
+  font-size: 1.4em;
+  color: black;
+}
+
+.header_resto h1 {
+  margin-right: 50px;
+}
+
+.restaurant {
+  background-color: #f6f6f6;
+  margin-top: -30px;
+  border-radius: 30px 30px 0px 0px;
+  z-index: 1;
+  position: relative;
+}
+
+.photo_intro {
+  height: 200px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.titre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-family: shrikhand;
+  padding-left: 20px;
+}
+
+.coeur {
+  margin-right: 40px;
+}
+
+.choice_meal h2 {
+  font-weight: 300;
+  font-size: 1em;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.choice_meal h2::after {
+  content: "";
+  height: 4px;
+  width: 40px;
+  background-color: #99e2d0;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+}
+
+.meal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: white;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.meal_titre {
+  margin: 5px;
+  font-size: 1.1em;
+}
+
+.meal_detail {
+  font-weight: 300;
+  margin: 0px 5px;
+}
+
+.prix p {
+  font-weight: 700;
+  padding-top: 15px;
+  margin-bottom: 5px;
+  margin-right: 20px;
+}
+
+body {
+  margin: auto;
   font-family: roboto,sans-serifs;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
