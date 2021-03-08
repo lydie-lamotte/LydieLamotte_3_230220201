@@ -74,70 +74,84 @@
 } 
 .nav {
     padding-bottom: 10px;
-        &_tittle {
-            font-size: 1.2em;
-            padding-left: 20px;
-            margin-top: 30px;
-        }
 }
 .tittle {
     font-size: 1.2em;
     padding-left: 20px;
     margin-top: 30px;
+    @media (min-width: 768px) {
+        font-size: 1.5em;
+        text-align: center;
+    }
 }
 .choice {
-    display: block;
-        &_resto {
-            display: flex;
-            width: 80%;
-            text-decoration: none;
-            margin: auto;
-            background-color: $color-fond;
-            border-radius: 20px;
-            padding: 10px 0px;
-            margin-bottom: 30px;
-            @extend %shadow;
-                &:hover {
-                    background-color: #e7e7fc;
-                }
-        }  
-.choice_icon:hover {
-    color: $color-primaire;
-}          
-                &_number {
-                    background-color: $color-primaire;
-                    font-size: 0.8em;
-                    color: white;
-                    border-radius: 50%;
-                    padding: 3px 6px;
-                    margin-left: -10px;
-                    height: 15px;
-                }
-                    &_icon {
-                        margin: 17px;  
-                        color: gray; 
-                    }
-                        &_tittle {
-                            color: black;
-                            font-weight: 600;
-                            padding-left: 10px;
-                        }
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    &_resto {
+        display: flex;
+        width: 80%;
+        text-decoration: none;
+        margin: auto;
+        background-color: $color-fond;
+        border-radius: 20px;
+        padding: 10px 0px;
+        margin-bottom: 30px;
+        @extend %shadow;
+        &:hover {
+            background-color: #e7e7fc;
+        }
+            @media (min-width:768px) {
+                width: 30%;
+                padding: 0;
+            }
+    }        
+        &_number {
+            background-color: $color-primaire;
+            font-size: 0.8em;
+            color: white;
+            border-radius: 50%;
+            padding: 3px 6px;
+            margin-left: -10px;
+            height: 15px;
+        }
+        &_icon {
+            margin: 17px;  
+            color: gray; 
+        }
+        &_tittle {
+            color: black;
+            font-weight: 600;
+            padding-left: 10px;
+        }
 }
 .resto {
     background-color: $color-fond;
-        h2 {
-            padding-top: 50px;
-        }
+    h2 {
+        padding-top: 50px;
+    }
 }
 .carte {
     padding-bottom: 30px;
-        &_resto {
-            @extend %shadow;
-            @include carte;
+    @media (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &_resto {
+        @extend %shadow;
+        @include carte;
+        @media (min-width: 768px) {
+            width: 45%;
+            margin-bottom: 30px;
         }
-            &_photo {
-                @include carte_photo;
-            }
+    }
+    &_photo {
+        @include carte_photo;
+        @media  (min-width: 768px){
+            height: 250px;
+        }
+    }
 }
 .new {
     position: absolute;
@@ -148,10 +162,10 @@
     right: 20px;
     color: #04a981;
     border-radius: 3px;
-        p {
-            margin: 0;
-            font-weight: 500;
-        }
+    p {
+        margin: 0;
+        font-weight: 500;
+    }
 }
 .info {
     display: flex;
@@ -172,7 +186,7 @@
 .coeur {
     @include coeur;
     &:hover {
-    animation: like 250ms ease-in-out forwards;
+        animation: like 250ms ease-in-out forwards;
     }
 }
 
@@ -185,32 +199,39 @@
         -webkit-text-stroke-color: transparent;
     }
 }
-    
-   
-                   
 footer {
     background-color: $color-footer;
     color: #fff;
     padding-bottom: 30px;
-        h1 {
-            font-family: $font-tittle;
-            font-size: 1em;
-            font-weight: 500;
-            padding: 20px;
-            margin-block: auto;   
-        }
+    @media (min-width: 768px) {
+        text-align: center;
+    }
+    h1 {
+        font-family: $font-tittle;
+        font-size: 1em;
+        font-weight: 500;
+        padding: 20px;
+        margin: auto;
+        @media (min-width: 768px) {
+            font-size: 1.4em;
+            padding-left: 40px;
+        }  
+    }
 } 
 .footer_list {
     display: flex;
     padding-left: 20px;
     margin-bottom: 10px;
-        &_icon {
-            font-size: .8em;
-        }
-            p {
-                padding-left: 10px;
-                margin: 0;
-            }
+    @media (min-width: 768px) {
+        justify-content: center;
+    }
+    &_icon {
+        font-size: .8em;
+    }
+    p {
+        padding-left: 10px;
+        margin: 0;
+    }
 }     
 .hand {
     margin-left: -5px;
