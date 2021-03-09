@@ -1,13 +1,12 @@
 .header_resto {
     display: flex;
     align-items: baseline;
-    justify-content: space-around;
+    justify-content: center;
     &--icon {
         font-size: 1.4em;
-        color: black;                       
-    }
-    h1 {
-        margin-right: 50px;
+        color: black; 
+        margin-left: -70px;
+                              
     }
 }
 .restaurant {
@@ -51,18 +50,55 @@
 .meal {
     @include meal;
     @extend %shadow;
+    transform: scaley(0);
+    opacity: 0;
+    animation: loadmeal 0.4s ease-in 1 forwards;
     &_titre {
         margin: 5px;
         font-size: 1.1em;
+        text-overflow: ellipsis;
+        padding: 5px 0px 0px 5px;
     }
     &_detail { 
         font-weight: 300;
         margin: 0px 5px;
+        text-overflow: ellipsis;
+        padding: 0px 0px 5px 5px;
     }
+}
+@keyframes loadmeal {
+    0% { transform:scaley(0);opacity: 0;}
+    100% { transform:scaley(1); opacity: 1;}
+}
+.meal1 {
+    animation-delay: 0s;
+}
+.meal2 {
+    animation-delay: 0.2s;
+}
+.meal3 {
+    animation-delay: 0.4s;
 }
 .prix p{
     font-weight: 700;
     padding-top: 15px;
     margin-bottom: 5px;
     margin-right: 20px;
+}
+.check {
+    background-color: $color-tertiaire;
+    width: 80px;
+    border-radius: 0px 20px 20px 0px;
+    &_icon {
+        color: white;
+        font-size: 1.6em;
+        margin-top: 18px;
+        margin-left: 25px;
+        
+    }
+}
+.btn {
+    @include btn;
+    padding: 15px 30px;
+    
 }
