@@ -109,6 +109,9 @@
         @extend %shadow;
         &:hover {
             background-color: hsl(240, 78%, 95%);
+            >.choice_icon {
+                color: $color-primaire;
+            }
         }
             @media (min-width: 806px) {
                 width: 30%;

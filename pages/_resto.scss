@@ -20,6 +20,9 @@
     height: 200px;
     width: 100%;
     object-fit: cover;
+    @media (min-width:768px) {
+        height: 350px;
+    }
 }
 .titre {
     display: flex;
@@ -50,55 +53,80 @@
 .meal {
     @include meal;
     @extend %shadow;
-    transform: scaley(0);
+    cursor: pointer;    
     opacity: 0;
-    animation: loadmeal 0.4s ease-in 1 forwards;
+    animation: loadmeal 0.6s ease-out 1 forwards;
+    &:hover >.check  {
+        width: 80px;
+    }
+    &_info {
+        flex: 1;
+    }
     &_titre {
-        margin: 5px;
-        font-size: 1.1em;
-        text-overflow: ellipsis;
-        padding: 5px 0px 0px 5px;
+    margin: 5px;
+    font-size: 1.1em;
+    text-overflow: ellipsis;
+    padding: 5px 0px 0px 5px;
     }
     &_detail { 
         font-weight: 300;
         margin: 0px 5px;
         text-overflow: ellipsis;
-        padding: 0px 0px 5px 5px;
+        padding: 0px 0px 10px 5px;
     }
 }
 @keyframes loadmeal {
-    0% { transform:scaley(0);opacity: 0;}
-    100% { transform:scaley(1); opacity: 1;}
+    0% { transform:translatey(0);opacity: 0;}
+    100% { transform:translatey(1); opacity: 1;}
 }
 .meal1 {
     animation-delay: 0s;
 }
 .meal2 {
-    animation-delay: 0.2s;
+    animation-delay: 0.3s;
 }
 .meal3 {
-    animation-delay: 0.4s;
+    animation-delay: 0.6s;
 }
-.prix p{
+.prix p {
     font-weight: 700;
     padding-top: 15px;
     margin-bottom: 5px;
     margin-right: 20px;
 }
 .check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     background-color: $color-tertiaire;
-    width: 80px;
+    width: 0;
     border-radius: 0px 20px 20px 0px;
+    transition: width 0.5s ease-in;      
     &_icon {
         color: white;
         font-size: 1.6em;
-        margin-top: 18px;
-        margin-left: 25px;
-        
+        transition: 0.5s;           
     }
+}
+.meal:hover .check >.check_icon {
+    transition: 0.5s  ease-in-out ;
+    transform: rotate(1turn)
 }
 .btn {
     @include btn;
     padding: 15px 30px;
     
+}
+@media (min-width:768px) {
+    .detail_menu {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .bloc_meal {
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+    }
 }
