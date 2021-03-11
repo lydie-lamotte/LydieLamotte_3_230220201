@@ -2,6 +2,7 @@
     font-family: roboto,sans-serifs;
     box-sizing: border-box;
 }
+/* spinner loader*/
 .loader {
     background-color: #f3f3f3;
     position: fixed;
@@ -39,7 +40,7 @@
     75%  {background-color:$color-primaire; left:0px; top:100px;}
     100% {background-color:$color-secondaire; left:0px; top:0px;}
   }
-
+/* header*/
 .header {
     padding-bottom: 10px;
     box-shadow: 0 4px 2px rgba(0,0,0,0.1);
@@ -63,6 +64,7 @@
                 font-weight: 500;
             }
 }  
+/* section bouton*/
 .search {
     background-color: $color-fond;
     padding: 30px 30px 70px 30px;
@@ -81,6 +83,7 @@
                     @include btn;
                 }  
 } 
+/* navigation*/
 .nav {
     padding-bottom: 10px;
 }
@@ -137,6 +140,7 @@
             padding-left: 10px;
         }
 }
+/*restaurant*/
 .resto {
     background-color: $color-fond;
     h2 {
@@ -195,6 +199,7 @@
         margin: 0px 10px 10px 10px;
     }
 }
+/*anim coeur*/
 .coeur {
     @include coeur;
     &:hover {
@@ -211,6 +216,7 @@
         -webkit-text-stroke-color: transparent;
     }
 }
+/*footer*/
 footer {
     background-color: $color-footer;
     color: #fff;

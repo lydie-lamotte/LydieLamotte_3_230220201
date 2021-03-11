@@ -21,7 +21,7 @@
     width: 100%;
     object-fit: cover;
     @media (min-width:768px) {
-        height: 350px;
+        height: 380px;
     }
 }
 .titre {
@@ -34,6 +34,7 @@
 .coeur {
     margin-right: 40px;
 }
+/* menu titre*/
 .choice_meal h2{
     font-weight: 300;
     font-size: 1em;
@@ -50,31 +51,33 @@
         left: 20px;
     }
 }
+/*menu carte*/
 .meal {
     @include meal;
-    @extend %shadow;
-    cursor: pointer;    
+    @extend %shadow;     
     opacity: 0;
     animation: loadmeal 0.6s ease-out 1 forwards;
     &:hover >.check  {
-        width: 80px;
+        width: 60px;
     }
     &_info {
         flex: 1;
+        white-space: nowrap;  
+        text-overflow: ellipsis; 
+        overflow: hidden;   
     }
     &_titre {
     margin: 5px;
     font-size: 1.1em;
-    text-overflow: ellipsis;
     padding: 5px 0px 0px 5px;
     }
     &_detail { 
         font-weight: 300;
         margin: 0px 5px;
-        text-overflow: ellipsis;
         padding: 0px 0px 10px 5px;
     }
 }
+/* anim load menu */
 @keyframes loadmeal {
     0% { transform:translatey(0);opacity: 0;}
     100% { transform:translatey(1); opacity: 1;}
@@ -86,6 +89,9 @@
     animation-delay: 0.3s;
 }
 .meal3 {
+    animation-delay: 0.45s;
+}
+.meal4 {
     animation-delay: 0.6s;
 }
 .prix p {
@@ -94,6 +100,7 @@
     margin-bottom: 5px;
     margin-right: 20px;
 }
+/* anim checked */
 .check {
     display: flex;
     justify-content: center;
@@ -105,19 +112,21 @@
     transition: width 0.5s ease-in;      
     &_icon {
         color: white;
-        font-size: 1.6em;
-        transition: 0.5s;           
+        font-size: 1.5em;          
     }
 }
+
 .meal:hover .check >.check_icon {
-    transition: 0.5s  ease-in-out ;
-    transform: rotate(1turn)
+    transition: 0.5s  ease-in-out;
+    transform: rotate(360deg)
 }
+/*bouton*/
 .btn {
     @include btn;
     padding: 15px 30px;
     
 }
+/* media large*/
 @media (min-width:768px) {
     .detail_menu {
         display: flex;
@@ -127,6 +136,7 @@
     .bloc_meal {
         display: flex;
         flex-direction: column;
+        
         width: 35%;
     }
 }
