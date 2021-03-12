@@ -1,4 +1,4 @@
-.header_resto {
+.header-resto {
     display: flex;
     align-items: baseline;
     justify-content: center;
@@ -6,7 +6,9 @@
         font-size: 1.4em;
         color: black; 
         margin-left: -70px;
-                              
+        @media (max-width: 350px) {
+            margin-left: -50px;
+        }                              
     }
 }
 .restaurant {
@@ -16,11 +18,11 @@
     z-index: 1;
     position: relative;
 }
-.photo_intro {
+.photo-intro {
     height: 200px;
     width: 100%;
     object-fit: cover;
-    @media (min-width:768px) {
+    @media (min-width: 806px) {
         height: 380px;
     }
 }
@@ -34,8 +36,10 @@
 .coeur {
     margin-right: 40px;
 }
+
+
 /* menu titre*/
-.choice_meal h2{
+.choice-meal h2{
     font-weight: 300;
     font-size: 1em;
     padding-left: 20px;
@@ -51,6 +55,8 @@
         left: 20px;
     }
 }
+
+
 /*menu carte*/
 .meal {
     @include meal;
@@ -60,23 +66,31 @@
     &:hover >.check  {
         width: 60px;
     }
-    &_info {
+    &-info {
         flex: 1;
         white-space: nowrap;  
         text-overflow: ellipsis; 
         overflow: hidden;   
     }
-    &_titre {
-    margin: 5px;
-    font-size: 1.1em;
-    padding: 5px 0px 0px 5px;
+    &-titre {
+        margin: 5px;
+        font-size: 1.1em;
+        padding: 5px 0px 0px 5px;
+        white-space: nowrap;  
+        text-overflow: ellipsis; 
+        overflow: hidden; 
     }
-    &_detail { 
+    &-detail { 
         font-weight: 300;
         margin: 0px 5px;
         padding: 0px 0px 10px 5px;
+        white-space: nowrap;  
+        text-overflow: ellipsis; 
+        overflow: hidden; 
     }
 }
+
+
 /* anim load menu */
 @keyframes loadmeal {
     0% { transform:translatey(0);opacity: 0;}
@@ -100,6 +114,8 @@
     margin-bottom: 5px;
     margin-right: 20px;
 }
+
+
 /* anim checked */
 .check {
     display: flex;
@@ -110,30 +126,34 @@
     width: 0;
     border-radius: 0px 20px 20px 0px;
     transition: width 0.5s ease-in;      
-    &_icon {
+    &-icon {
         color: white;
         font-size: 1.5em;          
     }
 }
 
-.meal:hover .check >.check_icon {
+.meal:hover .check >.check-icon {
     transition: 0.5s  ease-in-out;
     transform: rotate(360deg)
 }
+
+
 /*bouton*/
 .btn {
     @include btn;
     padding: 15px 30px;
     
 }
+
+
 /* media large*/
-@media (min-width:768px) {
-    .detail_menu {
+@media (min-width:806px) {
+    .detail-menu {
         display: flex;
         flex-direction: row;
         width: 100%;
     }
-    .bloc_meal {
+    .bloc-meal {
         display: flex;
         flex-direction: column;
         

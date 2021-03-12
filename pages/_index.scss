@@ -2,6 +2,8 @@
     font-family: roboto,sans-serifs;
     box-sizing: border-box;
 }
+
+
 /* spinner loader*/
 .loader {
     background-color: #f3f3f3;
@@ -9,10 +11,10 @@
     z-index: 1000;
     width: 100%;
     height: 100%;
-    animation: loader 2s both;
+    animation: loader 3s both;
     pointer-events: none;
     
-        &_cube { 
+        &-cercle { 
     position: relative;
     margin-left: 25%; 
     margin-top: 100px;       
@@ -20,34 +22,36 @@
     height: 70px;
     border-radius: 50%;
     background-color: $color-primaire;
-    animation: cube 1.5s ease-in-out both;
+    animation: cercle 2.5s ease-in-out both;
+    animation-delay: 0.2s;
     animation-iteration-count: 1;
     pointer-events: none;
-    @media (min-width:768px) {
-        margin-left: 45%;
-        margin-top: 10%;        
-    }
+        @media (min-width:768px) {
+            margin-left: 45%;
+            margin-top: 15%;        
+        }
     }
 }  
 @keyframes loader {
     80% { opacity: 1;}
     100% { opacity: 0;}
 }      
-@keyframes cube {
+@keyframes cercle {
     0%   {background-color:$color-primaire; left:0px; top:0px;}
     25%  {background-color:$color-secondaire; left:100px; top:0px;}
     50%  {background-color:$color-tertiaire; left:100px; top:100px;}
     75%  {background-color:$color-primaire; left:0px; top:100px;}
     100% {background-color:$color-secondaire; left:0px; top:0px;}
   }
+
+
 /* header*/
 .header {
     padding-bottom: 10px;
     box-shadow: 0 4px 2px rgba(0,0,0,0.1);
     z-index: 1;
     position: relative;
-
-        &_logo {
+        &-logo {
             @include logo;
         }
 }
@@ -56,7 +60,7 @@
     justify-content: center;
     background-color: rgb(241, 238, 238);
 
-        &_icon {
+        &-icon {
            margin: 17px 12px 0px 0px;
         }
             p {
@@ -64,25 +68,29 @@
                 font-weight: 500;
             }
 }  
+
+
 /* section bouton*/
 .search {
     background-color: $color-fond;
     padding: 30px 30px 70px 30px;
     text-align: center;
-        &_tittle {
+        &-tittle {
             margin-top: 0;
             padding: 30px 30px 0px 30px;
             font-size: 1.7em;
         }
-            &_subtittle {
+            &-subtittle {
                 font-weight: 300;
                 font-size: 1.1em;
                 margin-bottom: 50px;
             }
-                &_btn {
+                &-btn {
                     @include btn;
                 }  
 } 
+
+
 /* navigation*/
 .nav {
     padding-bottom: 10px;
@@ -100,8 +108,9 @@
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    &_resto {
+    &-resto {
         display: flex;
+        align-items: center;
         width: 80%;
         text-decoration: none;
         margin: auto;
@@ -112,7 +121,7 @@
         @extend %shadow;
         &:hover {
             background-color: hsl(240, 78%, 95%);
-            >.choice_icon {
+            >.choice-icon {
                 color: $color-primaire;
             }
         }
@@ -121,7 +130,7 @@
                 padding: 0;
             }
     }        
-        &_number {
+        &-number {
             background-color: $color-primaire;
             font-size: 0.8em;
             color: white;
@@ -130,16 +139,24 @@
             margin-left: -10px;
             height: 15px;
         }
-        &_icon {
+        &-icon {
             margin: 17px;  
             color: gray; 
+            @media (min-width: 806px) {
+                font-size: 1.1em;
+            }
         }
-        &_tittle {
+        &-tittle {
             color: black;
             font-weight: 600;
             padding-left: 10px;
+            @media (min-width: 806px) {
+                font-size: 1.1em;
+            }
         }
 }
+
+
 /*restaurant*/
 .resto {
     background-color: $color-fond;
@@ -154,7 +171,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
     }
-    &_resto {
+    &-resto {
         @extend %shadow;
         @include carte;
         @media (min-width: 806px) {
@@ -162,8 +179,8 @@
             margin-bottom: 30px;
         }
     }
-    &_photo {
-        @include carte_photo;
+    &-photo {
+        @include carte-photo;
         @media  (min-width: 806px){
             height: 250px;
         }
@@ -199,6 +216,8 @@
         margin: 0px 10px 10px 10px;
     }
 }
+
+
 /*anim coeur*/
 .coeur {
     @include coeur;
@@ -217,6 +236,8 @@
         -webkit-text-stroke-color: transparent;
     }
 }
+
+
 /*footer*/
 footer {
     background-color: $color-footer;
@@ -237,14 +258,14 @@ footer {
         }  
     }
 } 
-.footer_list {
+.footer-list {
     display: flex;
     padding-left: 20px;
     margin-bottom: 10px;
     @media (min-width: 806px) {
         justify-content: center;
     }
-    &_icon {
+    &-icon {
         font-size: .8em;
     }
     p {
