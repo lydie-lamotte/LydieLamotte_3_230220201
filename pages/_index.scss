@@ -203,12 +203,13 @@
 .coeur {
     @include coeur;
     &:hover {
-        animation: like 250ms ease-in-out forwards;
+        animation: like 700ms ease-in-out forwards;
     }
 }
 
 @keyframes like {
-    0% { color:white;}
+    
+    50% { opacity: 0.5;}
     100% {
         background-image: linear-gradient(to bottom right, $color-secondaire, $color-primaire);
         -webkit-background-clip: text;

@@ -365,13 +365,13 @@
 }
 
 .coeur:hover {
-  -webkit-animation: like 250ms ease-in-out forwards;
-          animation: like 250ms ease-in-out forwards;
+  -webkit-animation: like 700ms ease-in-out forwards;
+          animation: like 700ms ease-in-out forwards;
 }
 
 @-webkit-keyframes like {
-  0% {
-    color: white;
+  50% {
+    opacity: 0.5;
   }
   100% {
     background-image: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
@@ -383,8 +383,8 @@
 }
 
 @keyframes like {
-  0% {
-    color: white;
+  50% {
+    opacity: 0.5;
   }
   100% {
     background-image: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
