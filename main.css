@@ -486,6 +486,11 @@ footer a {
           box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+.search-btn:hover, .btn:hover {
+  -webkit-box-shadow: 4px 9px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 4px 9px 10px rgba(0, 0, 0, 0.5);
+}
+
 .search-btn, .btn {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
