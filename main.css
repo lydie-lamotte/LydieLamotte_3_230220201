@@ -1,4 +1,12 @@
+@charset "UTF-8";
 /* color et font*/
+/* elements récurrents dans une ou plusieurs pages */
+/*bouton*/
+/*logo ohmyfood*/
+/*restaurant page accueil*/
+/*photo restaurant page accueil*/
+/*coeur*/
+/*restaurant page resto*/
 .contenu {
   font-family: roboto,sans-serifs;
   -webkit-box-sizing: border-box;
