@@ -642,8 +642,8 @@ footer a {
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(1);
-            transform: translateY(1);
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
     opacity: 1;
   }
 }
@@ -654,8 +654,8 @@ footer a {
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(1);
-            transform: translateY(1);
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
     opacity: 1;
   }
 }
