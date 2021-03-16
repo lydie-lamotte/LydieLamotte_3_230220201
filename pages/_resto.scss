@@ -93,8 +93,8 @@
 
 /* anim load menu */
 @keyframes loadmeal {
-    0% { transform:translatey(0);opacity: 0;}
-    100% { transform:translatey(0,1); opacity: 1;}
+    0% { transform:translateY(0);opacity: 0;}
+    100% { transform:translateY(1); opacity: 1;}
 }
 .meal1 {
     animation-delay: 0s;
