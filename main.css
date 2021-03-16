@@ -185,12 +185,12 @@
   color: white;
   text-decoration: none;
   padding: 15px 15px;
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
 }
 
 .search-btn:hover {
   opacity: 0.7;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
 }
 
 /* navigation*/
@@ -389,6 +389,8 @@
   font-size: 1.5em;
   -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: black;
+  -webkit-transition: ease-in-out;
+  transition: ease-in-out;
 }
 
 .coeur:hover {
@@ -674,7 +676,7 @@ footer a {
 
 .prix {
   font-weight: 700;
-  padding-top: 15px;
+  padding-top: 37px;
   margin-bottom: 5px;
   margin-right: 20px;
 }
@@ -718,13 +720,13 @@ footer a {
   color: white;
   text-decoration: none;
   padding: 15px 15px;
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
   padding: 15px 30px;
 }
 
 .btn:hover {
   opacity: 0.7;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
 }
 
 /* media large*/

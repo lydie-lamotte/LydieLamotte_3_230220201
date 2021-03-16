@@ -221,6 +221,7 @@
 /*anim coeur*/
 .coeur {
     @include coeur;
+    transition: ease-in-out;
     &:hover {
         animation: like 700ms ease-in-out forwards;
     }
