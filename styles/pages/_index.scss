@@ -14,7 +14,7 @@
     animation: loader 3s both;
     pointer-events: none;
     
-        &-cercle { 
+    &-cercle { 
     position: relative;
     margin-left: 25%; 
     margin-top: 100px;       
@@ -59,14 +59,13 @@
     display: flex;
     justify-content: center;
     background-color: rgb(241, 238, 238);
-
-        &-icon {
-           margin: 17px 12px 0px 0px;
-        }
-            p {
-                font-size: 1.1em;
-                font-weight: 500;
-            }
+    &-icon {
+        margin: 17px 12px 0px 0px;
+    }
+    p {
+        font-size: 1.1em;
+        font-weight: 500;
+    }
 }  
 
 
@@ -75,19 +74,20 @@
     background-color: $color-fond;
     padding: 30px 30px 70px 30px;
     text-align: center;
-        &-tittle {
-            margin-top: 0;
-            padding: 30px 30px 0px 30px;
-            font-size: 1.7em;
-        }
-            &-subtittle {
-                font-weight: 300;
-                font-size: 1.1em;
-                margin-bottom: 50px;
-            }
-                &-btn {
-                    @include btn;
-                }  
+    &-tittle {
+        margin-top: 0;
+        padding: 30px 30px 0px 30px;
+        font-size: 1.7em;
+        font-family: roboto;
+    }
+    &-subtittle {
+        font-weight: 300;
+        font-size: 1.1em;
+        margin-bottom: 50px;
+    }
+    &-btn {
+        @include btn;
+    }  
 } 
 
 
@@ -113,6 +113,7 @@
         align-items: center;
         width: 80%;
         text-decoration: none;
+        cursor: pointer;
         margin: auto;
         background-color: $color-fond;
         border-radius: 20px;

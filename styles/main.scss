@@ -1,0 +1,12 @@
+@import "/styles/base/base";
+@import "/styles/mixin/mixins";
+@import "/styles/pages/index";
+@import "/styles/placeholder/placeholder";
+@import "/styles/pages/resto";
+
+body {
+    margin: auto;
+    font-family: roboto,sans-serifs;
+    box-sizing: border-box;
+}
+

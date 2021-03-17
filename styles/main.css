@@ -185,6 +185,7 @@
   color: white;
   text-decoration: none;
   padding: 15px 15px;
+  font-family: roboto,sans-serif;
   -webkit-transition: opacity 0.5s ease-in;
   transition: opacity 0.5s ease-in;
 }
@@ -720,6 +721,7 @@ footer a {
   color: white;
   text-decoration: none;
   padding: 15px 15px;
+  font-family: roboto,sans-serif;
   -webkit-transition: opacity 0.5s ease-in;
   transition: opacity 0.5s ease-in;
   padding: 15px 30px;
