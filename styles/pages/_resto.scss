@@ -2,6 +2,7 @@
     display: flex;
     align-items: baseline;
     justify-content: center;
+
     &--icon {
         font-size: 1.4em;
         color: black; 
@@ -66,12 +67,14 @@
     &:hover >.check  {
         width: 60px;
     }
+
     &-info {
         flex: 1;
         white-space: nowrap;  
         text-overflow: ellipsis; 
         overflow: hidden;   
     }
+
     &-titre {
         margin: 5px;
         font-size: 1.1em;
@@ -80,6 +83,7 @@
         text-overflow: ellipsis; 
         overflow: hidden; 
     }
+
     &-detail { 
         font-weight: 300;
         margin: 0px 5px;
@@ -125,7 +129,8 @@
     background-color: $color-tertiaire;
     width: 0;
     border-radius: 0px 20px 20px 0px;
-    transition: width 0.5s ease-in;      
+    transition: width 0.5s ease-in;  
+
     &-icon {
         color: white;
         font-size: 1.5em;          
@@ -147,15 +152,16 @@
 
 /* media large*/
 @media (min-width:806px) {
-    .detail-menu {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-    }
-    .bloc-meal {
-        display: flex;
-        flex-direction: column;
-        
-        width: 35%;
-    }
+    
+.detail-menu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.bloc-meal {
+    display: flex;
+    flex-direction: column;
+    
+    width: 35%;
+}
 }
