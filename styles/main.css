@@ -25,6 +25,7 @@
   -webkit-animation: loader 3s both;
           animation: loader 3s both;
   pointer-events: none;
+  max-width: 1200px;  
 }
 
 .loader-cercle {
@@ -46,7 +47,7 @@
 
 @media (min-width: 768px) {
   .loader-cercle {
-    margin-left: 30%;
+    margin-left: 40%;
     margin-top: 15%;
   }
 }
