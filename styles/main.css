@@ -11,6 +11,8 @@
   font-family: roboto,sans-serifs;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  max-width: 1200px;
+  margin: auto;
 }
 
 /* spinner loader*/
@@ -44,7 +46,7 @@
 
 @media (min-width: 768px) {
   .loader-cercle {
-    margin-left: 45%;
+    margin-left: 35%;
     margin-top: 15%;
   }
 }
